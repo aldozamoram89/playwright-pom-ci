@@ -1,18 +1,12 @@
 {
   "name": "playwright-pom-ci",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Proyecto Playwright con POM y CI/CD configurado",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@playwright/test": "^x.y.z",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "@playwright/test": "^1.42.0",
+    "typescript": "^5.1.6"
   }
-  
 }
