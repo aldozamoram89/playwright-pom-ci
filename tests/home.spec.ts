@@ -1,13 +1,12 @@
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/home-page';
 
-test('test usando POM para Example.com', async ({ page }) => {
+test('validación con POM', async ({ page }) => {
   const home = new HomePage(page);
 
   await home.goto();
   await home.verifyHeading();
   await home.clickMoreInfo();
 
-  // Validar que navegó al sitio correcto
-  await test.expect(page).toHaveURL('https://www.iana.org/domains/example');
+  await expect(page).toHaveURL('https://www.iana.org/help/example-domains');
 });
